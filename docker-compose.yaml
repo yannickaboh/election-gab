@@ -32,8 +32,8 @@ services:
     networks:
       - app_network
 
-  election:
-    container_name: election
+  election_db:
+    container_name: election_db
     image: mysql:8.0.20
     restart: always
     volumes:
@@ -48,8 +48,8 @@ services:
     networks:
       - app_network
 
-  blog_redis:
-    container_name: blog_redis
+  election_redis:
+    container_name: election_redis
     image: redis:latest
     ports:
       - 6379:6379
